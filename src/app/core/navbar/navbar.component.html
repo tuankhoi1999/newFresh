@@ -1,3 +1,26 @@
-<p>
-  navbar works!
-</p>
+<div class="navbar-pure-css">
+  <div class="logo">New Fresh</div>
+  <nav [ngClass]="currentShow">
+    <ul class="">
+      <li class="list">
+        <a class="nav-list active">Home</a>
+      </li>
+      <li class="list">
+        <a class="nav-list">Galley</a>
+      </li>
+      <li class="list">
+        <a class="nav-list">Shopping</a>
+      </li>
+      <li class="list">
+        <a class="nav-list">About</a>
+      </li>
+      <li class="list">
+        <a class="nav-list">Contact</a>
+      </li>
+      <li class="list">
+        <a class="nav-list">Login</a>
+      </li>
+    </ul>
+  </nav>
+  <div class="menu-toggle"><i class="fas fa-bars" (click)="showNavbar()"></i></div>
+</div>
