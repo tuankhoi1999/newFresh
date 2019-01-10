@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 
 
 @Component({
@@ -8,12 +8,35 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
+  isFixed = true;
+  currentFixed: any;
   isShow = true;
   currentShow: any;
+
+  @HostListener('window:scroll', ['$event'])
+
+  scrollHandler(event) {
+
+    if (document.body.scrollTop > 1 || document.documentElement.scrollTop > 1) {
+      this.currentFixed = { fixednav: this.isFixed }
+    } else
+      this.currentFixed = { fixednav: !this.isFixed }
+  }
+
+  infor = {
+    location: '221B Baker Stress, London',
+    email: 'newfreshbank@support.com',
+    phoneNumber: '08 335 1769',
+    language: 'EN'
+  }
+
+
   showNavbar() {
-    this.currentShow = { active: this.isShow};
+    this.currentShow = { active: this.isShow };
     this.isShow = !this.isShow;
   }
+
+ 
 
   constructor() {
 

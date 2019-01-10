@@ -1,0 +1,58 @@
+.bg {
+  .icon {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+
+    .hambuger {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 50px;
+      height: 6px;
+      background: #fff;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+      transition-duration: .5s;
+
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        width: 50px;
+        height: 6px;
+        background: #fff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+        transition-duration: .5s;
+      }
+
+    }
+
+    .hambuger::before {
+      top: -16px;
+    }
+
+    .hambuger::after {
+      top: 16px;
+    }
+
+    .hambuger.active {
+      background: rgba(0, 0, 0, 0);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0);
+    }
+
+    .hambuger.active::before {
+      top: 0;
+      transform: rotate(45deg);
+    }
+
+    .hambuger.active::after {
+      top: 0;
+      transform: rotate(135deg);
+    }
+  }
+}

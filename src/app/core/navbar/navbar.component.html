@@ -1,26 +1,62 @@
-<div class="navbar-pure-css">
-  <div class="logo">New Fresh</div>
+<div class="navbar-header-top d-none d-sm-block nav-header">
+  <div class="container h-100">
+    <div class="row h-100">
+      <div class="col-lg-5 my-auto py-2 pl-0">
+        <p class="mb-0"><i class="fas fa-university pr-2"></i>{{ infor.location }}</p>
+      </div>
+      <div class="col-lg-3 my-auto">
+        <p class="mb-0"><i class="fab fa-telegram-plane pr-2"></i>{{ infor.email }}</p>
+      </div>
+      <div class="col-lg-2 my-auto pl-4 text-right">
+        <p class="mb-0"><i class="fas fa-phone pr-2"></i>{{ infor.phoneNumber }}</p>
+      </div>
+      <div class="col-lg-2 my-auto pl-4 text-right dropdown-option">
+        <div ngbDropdown class="d-inline-block">
+          <p class="mb-0" id="dropdownBasic1" ngbDropdownToggle>
+            <i class="fas fa-globe-americas p-1"></i>
+            {{ infor.language }}</p>
+          <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+            <span></span>
+            <button class="dropdown-item">English</button>
+            <button class="dropdown-item">Tiếng Việt</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="navbar-pure-css" [ngClass]="currentFixed">
+  <div class="logo h-100"><i class="fas fa-water p-2"></i>NEW FRESH</div>
   <nav [ngClass]="currentShow">
-    <ul class="">
+    <ul class="h-100">
       <li class="list">
-        <a class="nav-list active">Home</a>
+        <a class="nav-list text-uppercase">Home</a>
       </li>
       <li class="list">
-        <a class="nav-list">Galley</a>
+        <a class="nav-list text-uppercase">Individual</a>
       </li>
       <li class="list">
-        <a class="nav-list">Shopping</a>
+        <a class="nav-list text-uppercase">Account</a>
       </li>
       <li class="list">
-        <a class="nav-list">About</a>
+        <a class="nav-list text-uppercase">Businesses</a>
       </li>
       <li class="list">
-        <a class="nav-list">Contact</a>
+        <a class="nav-list text-uppercase">Organizations</a>
       </li>
       <li class="list">
-        <a class="nav-list">Login</a>
+        <a class="nav-list text-uppercase">Login</a>
       </li>
     </ul>
   </nav>
-  <div class="menu-toggle"><i class="fas fa-bars" (click)="showNavbar()"></i></div>
+  <!-- <div class="menu-toggle"><i class="fas fa-bars" (click)="showNavbar()"></i></div> -->
+  <!-- <app-transform-button (click)="showNavbar()"></app-transform-button> -->
+  <div class="bg">
+    <div class="icon hambuger" [ngClass]="currentShow" (click)="showNavbar()">
+      <div class="hambuger" [ngClass]="currentShow">
+      </div>
+    </div>
+  </div>
 </div>
