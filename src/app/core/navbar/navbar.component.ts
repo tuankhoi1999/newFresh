@@ -25,7 +25,7 @@ export class NavbarComponent implements OnInit {
 
   infor = {
     location: '221B Baker Stress, London',
-    email: 'newfreshbank@support.com',
+    email: 'newfreshtravel@support.com',
     phoneNumber: '08 335 1769',
     language: 'EN'
   }

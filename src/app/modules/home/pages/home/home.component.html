@@ -1,5 +1,69 @@
-<div class="bg-dark fresh-home" (scroll)="scrollHandler($event)">
-  <div class="container">
-    <h2>Hello {{name}}</h2>
+<div class="fresh-home paralax">
+  <div class="container h-100">
+    <div class="row h-100">
+      <div class="col-lg-6 my-auto">
+        <div class="row">
+          <div class="card w-100 search-form">
+            <div class="card-header text-center pt-4">
+              <h2 class="font-weight-bold text-uppercase">welcome to newfresh!</h2>
+            </div>
+            <div class="card-body">
+              <form action="">
+                <div class="wheretogo w-100 pl-4 pr-4">
+                  <input type="text" placeholder="Where do you want to go?" class="w-100 p-2">
+                  <span>
+                    <i class="fas fa-globe-europe"></i>
+                  </span>
+                </div>
+                <div class="arrive wheretogo pl-4 pr-4">
+                  <input class="form-control" placeholder="Arrive Day" name="dp" ngbDatepicker #d="ngbDatepicker">
+                  <span class="input-group-append" (click)="d.toggle()">
+                    <i class="far fa-calendar-alt"></i>
+                  </span>
+                </div>
+                <div class="depart wheretogo pl-4 pr-4">
+                  <input type="text" placeholder="Transportation" class="w-100 p-2">
+                  <span>
+                    <i class="fas fa-plane"></i>
+                  </span>
+                </div>
+                <div class="resident wheretogo pl-4 pr-4">
+                  <input type="text" placeholder="Price ($)" class="w-100 p-2">
+                  <span>
+                    <i class="fas fa-coins"></i>
+                  </span>
+                </div>
+                <div class="search pt-4 pl-4 pr-4">
+                  <button class="btn btn-primary btn-search text-uppercase ">
+                    <i class="fas fa-search"></i>
+                    search
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6 d-none d-sm-block">
+        <div class="row h-100">
+          <div class="title sologan my-auto pt-4">
+            <h1 class="text-uppercase pt-4">
+              new fresh traveling!
+            </h1>
+            <p class="">Go anywhere you want</p>
+            <button class="btn btn-primary btn-search text-uppercase ">
+                <i class="fas fa-arrow-left"></i>
+            joining now!
+            </button>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
   </div>
+</div>
+<div class="bg-dark" style="height:1000px;">
+
 </div>

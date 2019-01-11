@@ -11,12 +11,24 @@ app-navbar {
   button {
     color: #4ec3ca !important;
 
-    &:active{
+    &:active {
       background: gainsboro !important;
     }
 
     &:hover {
       background: #dbf7f7 !important;
+    }
+  }
+}
+
+app-home {
+  .search-form {
+    .btn-link {
+      color: #4ec3ca !important;
+    }
+
+    .bg-primary {
+      background-color: #4ec3ca !important;
     }
   }
 }

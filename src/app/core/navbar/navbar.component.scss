@@ -1,7 +1,20 @@
+$colors: (facebook: #365899,
+twitter: #006dbf,
+google: #d93025,
+youtube: #ff0000,
+instagram: linear-gradient(to bottom right, #8a3ab9 10%, #fbad50 90%),
+newfresh: #4ec3ca);
+
+@function color($type) {
+  @return map-get($colors, $type);
+}
+
+
 .nav-header {
-  // background-image: linear-gradient(90deg, #4ec3ca, #b4e0df);
-  background: #4ec3ca;
+  // background-image: linear-gradient(90deg, color(newfresh), #b4e0df);
+  background: color(newfresh);
   color: #fff;
+
 
   p {
     cursor: pointer;
@@ -16,7 +29,7 @@
 }
 
 .activelink {
-  background: #4ec3ca;
+  background: color(newfresh);
   color: #fff !important;
 }
 
@@ -30,12 +43,13 @@
   width: 100%;
   height: 70px;
   box-sizing: border-box;
+  z-index: 1;
 
   .logo {
     cursor: pointer;
     font-size: 35px;
     font-weight: 600;
-    color: #4ec3ca;
+    color: color(newfresh);
     text-align: center;
     float: left;
     line-height: 65px;
@@ -51,7 +65,7 @@
       display: flex;
       margin: 0;
       padding: 0;
-      color: #4ec3ca;
+      color: color(newfresh);
 
       li {
         cursor: pointer;
@@ -59,7 +73,7 @@
 
         &:hover,
         &:active {
-          background: #4ec3ca;
+          background: color(newfresh);
           color: #fff !important;
           transition-duration: .3s;
         }
@@ -74,8 +88,8 @@
 
           &:hover,
           .active {
-            // color: #4ec3ca;
-            // border-bottom: solid 2px #4ec3ca;
+            // color: color(newfresh);
+            // border-bottom: solid 2px color(newfresh);
             // transition-duration: .2s;
           }
         }
@@ -84,7 +98,7 @@
   }
 
   .menu-toggle {
-    color: #4ec3ca;
+    color: color(newfresh);
     float: right;
     line-height: 65px;
     font-size: 24px;
@@ -110,7 +124,7 @@
     transform: rotate(45deg);
     transition-duration: .2s;
     background: #fff;
-    border-top: solid 1px #4ec3ca;
-    border-left: solid 1px #4ec3ca;
+    border-top: solid 1px color(newfresh);
+    border-left: solid 1px color(newfresh);
   }
 }

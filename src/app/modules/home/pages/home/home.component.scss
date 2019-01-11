@@ -1,3 +1,143 @@
+$colors: (facebook: #365899,
+twitter: #006dbf,
+google: #d93025,
+youtube: #ff0000,
+instagram: linear-gradient(to bottom right, #8a3ab9 10%, #fbad50 90%),
+newfresh: #4ec3ca);
+
+@function color($type) {
+  @return map-get($colors, $type);
+}
+
+
 .fresh-home {
-    height: 1000px;
+  height: 100vh;
+  perspective: 1px;
+  transform-style: preserve-3d;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+
+
+.paralax {
+  box-sizing: border-box;
+  min-height: 100vh;
+  transform-style: inherit;
+  position: relative;
+}
+
+.paralax h1 {
+  margin-top: -100px;
+}
+
+.paralax,
+.paralax:before {
+  background: 50% 50% / cover;
+}
+
+.paralax::before {
+  content: '';
+  bottom: 0px;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  position: absolute;
+  display: block;
+  background-image: url('../../../../../assets/images/bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;
+  display: flexed;
+  background-attachment: fixed;
+}
+
+.search-form {
+  background-color: rgba(0, 0, 0, 0.3);
+
+
+
+  .card-header {
+    border-bottom: unset !important;
+  }
+
+  h2 {
+    -webkit-text-stroke-width: 1px;
+    color: white;
+    -webkit-text-stroke-color: color(newfresh);
+  }
+
+  .wheretogo {
+    i {
+      position: relative;
+      float: left;
+      bottom: 35px;
+      left: 10px;
+      font-size: x-large;
+      color: color(newfresh)
+    }
+
+    input {
+      height: 50px;
+      border-radius: 5px;
+      border-width: 0;
+      color: color(newfresh);
+      padding-left: 40px !important;
+      font-size: 20px;
+
+
+      &::placeholder {
+        color: color(newfresh);
+        letter-spacing: 1px;
+      }
+    }
+  }
+
+  .arrive {
+    cursor: pointer;
+  }
+
+  .search {
+    button {
+      height: 50px;
+      width: 100%;
+      font-size: 20px;
+      color: white;
+      background: color(newfresh);
+      border: solid 1px white;
+    }
+  }
+}
+
+.sologan {
+  text-align: right !important;
+
+  h1 {
+    font-style: italic;
+    font-size: 90px;
+    -webkit-text-stroke-width: 3px;
+    // color: color(newfresh);
+    // -webkit-text-stroke-color: white;
+    color: white;
+    -webkit-text-stroke-color: color(newfresh);
+  }
+
+  p {
+    font-style: italic;
+    font-size: 50px;
+    -webkit-text-stroke-width: 0.5px;
+    color: color(newfresh);
+    -webkit-text-stroke-color: white;
+  }
+
+  button {
+    width: 70%;
+    float: right;
+    color: color(newfresh);
+    background: white;
+    border: solid 3px color(newfresh);
+    font-style: italic;
+    font-size: 20px;
+  }
 }
