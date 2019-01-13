@@ -128,3 +128,26 @@ newfresh: #4ec3ca);
     border-left: solid 1px color(newfresh);
   }
 }
+
+.formpopup {
+  display: none;
+  position: fixed;
+  z-index: 9;
+  top: 20%;
+  left: 220px;
+
+  button {
+    color: white;
+    border-radius: 0px;
+    position: relative;
+    left: 911px;
+    background: black;
+    height: 35px;
+    width: 35px;
+  }
+}
+
+.formactive {
+  display: block !important;
+  transition-duration: .3s;
+}

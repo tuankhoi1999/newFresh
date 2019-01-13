@@ -6,24 +6,22 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FooterComponent } from './core/footer/footer.component';
-import { HeaderComponent } from './core/header/header.component';
-import { NavbarComponent } from './core/navbar/navbar.component';
 import { LoaderComponent } from './shared/components/loader/loader.component';
 import { TransformButtonComponent } from './shared/components/button/transform-button/transform-button.component';
+import { HeaderModule } from './core/header/header.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     FooterComponent,
-    HeaderComponent,
-    NavbarComponent,
     LoaderComponent,
     TransformButtonComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    HeaderModule
   ],
   providers: [],
   bootstrap: [AppComponent]

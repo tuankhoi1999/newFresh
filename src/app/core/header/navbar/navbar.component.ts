@@ -12,6 +12,8 @@ export class NavbarComponent implements OnInit {
   currentFixed: any;
   isShow = true;
   currentShow: any;
+  isPopup = true;
+  formPopup: any;
 
   @HostListener('window:scroll', ['$event'])
 
@@ -36,7 +38,12 @@ export class NavbarComponent implements OnInit {
     this.isShow = !this.isShow;
   }
 
- 
+
+  openCloseForm() {
+    this.formPopup = { formactive: this.isPopup };
+    this.isPopup = !this.isPopup;
+  }
+
 
   constructor() {
 

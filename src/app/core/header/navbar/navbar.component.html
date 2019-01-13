@@ -15,7 +15,7 @@
           <p class="mb-0" id="dropdownBasic1" ngbDropdownToggle>
             <i class="fas fa-globe-americas p-1"></i>
             {{ infor.language }}</p>
-          <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+          <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class="dd-language">
             <span></span>
             <button class="dropdown-item">English</button>
             <button class="dropdown-item">Tiếng Việt</button>
@@ -46,7 +46,7 @@
       <li class="list">
         <a class="nav-list text-uppercase">Booking</a>
       </li>
-      <li class="list">
+      <li class="list" (click)="openCloseForm()">
         <a class="nav-list text-uppercase">Login</a>
       </li>
     </ul>
@@ -59,4 +59,10 @@
       </div>
     </div>
   </div>
+</div>
+
+
+<div [ngClass]="formPopup" class="formpopup" id="login-form">
+    <button class="btn" (click)="openCloseForm()"><i class="fas fa-times"></i></button>
+  <login-form></login-form>
 </div>
