@@ -1,0 +1,54 @@
+$colors: (newfresh: #4ec3ca);
+
+@function color($type) {
+  @return map-get($colors, $type);
+}
+
+
+.intro {
+  width: 100%;
+  background: white;
+  position: relative;
+  top: -150px;
+  border-radius: 5px;
+
+  h1 {
+      font-size: 40px;
+      font-weight: bold;
+  }
+
+  div {
+    h2 {
+      color: color(newfresh);
+    }
+  }
+
+  .card {
+      border: solid 1px color(newfresh)
+  }
+
+  .rating {
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+
+    ngb-rating {
+        font-size: 25px;
+      color: color(newfresh);
+      
+      &:focus {
+          outline: none;
+      }
+    }
+  }
+
+  .paris {
+    .card-body {
+      height: 300px;
+      background-image: url('../../../../../assets/images/paris.jpg');
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
+}

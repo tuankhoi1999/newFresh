@@ -147,6 +147,27 @@
       top: 0 !important;
     }
   }
+
+  app-devider {
+    .drop-devider {
+      .mobile {
+        display: inherit;
+        padding-left: 8px;
+        bottom: 5px !important;
+
+        i {
+          font-size: 15px !important;
+          padding: 0 !important;
+        }
+      }
+    }
+  }
+
+  app-intro {
+    .card-mobile {
+      padding-bottom: 30px;
+    }
+  }
 }
 
 @media screen and (min-width: 991px) and (max-width: 1200px) {}

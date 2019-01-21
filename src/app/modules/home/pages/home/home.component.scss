@@ -22,7 +22,7 @@ newfresh: #4ec3ca);
 
 .paralax {
   box-sizing: border-box;
-  min-height: 100vh;
+  min-height: 800px;
   transform-style: inherit;
   position: relative;
 }
@@ -51,11 +51,12 @@ newfresh: #4ec3ca);
   min-height: 100vh;
   display: flexed;
   background-attachment: fixed;
+  transform: translateZ(-1px) scale(2.1);
 }
 
 .search-form {
   background-color: rgba(0, 0, 0, 0.3);
-
+  margin-top: 100px;
 
 
   .card-header {

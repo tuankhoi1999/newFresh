@@ -1,0 +1,27 @@
+$colors: (newfresh: #4ec3ca);
+
+@function color($type) {
+  @return map-get($colors, $type);
+}
+
+.drop-devider {
+  padding-top: 30px;
+  height: 50px;
+  width: 100%;
+
+  .bg-newfresh {
+    height: 5px;
+    width: 100%;
+    background: color(newfresh);
+  }
+
+  .leaf-icon {
+    bottom: 10px;
+
+    i {
+      font-size: 25px;
+      color: color(newfresh)
+    }
+  }
+
+}
